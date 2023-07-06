@@ -19,7 +19,6 @@ function extrairSrcDoIframe(textoHTML: string) {
 
     if (match && match.length > 1) {
         var src = match[1];
-        console.log('src: ', src)
         return src.split(" ").join('');
     }
 

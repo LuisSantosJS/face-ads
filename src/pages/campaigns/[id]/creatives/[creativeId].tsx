@@ -9,8 +9,7 @@ import ArrowBack from "@mui/icons-material/ArrowBack";
 import Image from "next/image";
 
 const HomePage = () => {
-    const { push, query, back } = useRouter();
-    console.log(query.creativeId);
+    const { query, back } = useRouter();
     const { data, isLoading, error, isError } = useQuery(
         "creative",
         () => fetchCreativeById(query.creativeId as string),
@@ -18,9 +17,6 @@ const HomePage = () => {
 
         }
     );
-
-    console.log(data);
-
     if (isError) return <div className="main-white-box">{error as any}</div>;
     return (
         <>
