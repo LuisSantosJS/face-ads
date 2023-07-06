@@ -11,6 +11,8 @@ COPY . .
 
 RUN apk --no-cache add curl
 
+RUN npm install npm@latest -g
+
 RUN npm install
 
 ENV PORT 8080
