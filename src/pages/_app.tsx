@@ -32,7 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
   if (pathname.search("login") < 0) {
     return (
       <>
-        <ReactQueryDevtools initialIsOpen={false} />
         <span onClick={onExit} className="button-back-container dark">
           <LogoutRounded />
         </span>

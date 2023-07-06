@@ -60,8 +60,8 @@ export default function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main-app">
-        <div style={{ backgroundColor: "white" }} className="main-white-box">
-          <h3 className="loginName">
+        <div style={{ backgroundColor: "white", overflow:"auto", }} className="main-white-box">
+          <h3  style={{paddingTop: 80}} className="loginName">
             {step == 0
               ? "Insira seu access token"
               : "Selecione sua conta de anúncios"}
@@ -102,7 +102,7 @@ export default function Login() {
               );
             })}
 
-          <button onClick={onSubmit} disabled={loading} className="buttonLogin">
+          <button style={{marginBottom: 20}} onClick={onSubmit} disabled={loading} className="buttonLogin">
             {step == 0 ? "Continuar" : "Accesar"}
           </button>
         </div>

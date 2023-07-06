@@ -17,6 +17,8 @@ RUN npm install --global --force yarn
  
 RUN yarn
 
+RUN yarn build
+
 ENV PORT 8080
 
 EXPOSE 8080

@@ -41,7 +41,7 @@ const columns = [
     align: "center",
     label: "Nº de Criativos",
     minWidth: 60,
-    format: (value: { data: { id: string }[] }) => value.data.length,
+    format: (value: { data: { id: string }[] }) => value?.data?.length,
   },
 ];
 
