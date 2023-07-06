@@ -11,14 +11,10 @@ COPY . .
 
 RUN apk --no-cache add curl
 
-RUN npm install npm@latest -g
-
-RUN npm install --global --force yarn
- 
-RUN yarn
+RUN npm install
 
 ENV PORT 8080
 
 EXPOSE 8080
  
-CMD ["yarn", "start"]
+CMD ["npm", "run", "start"]
